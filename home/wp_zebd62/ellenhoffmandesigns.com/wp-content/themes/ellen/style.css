@@ -1,0 +1,25 @@
+/*
+Theme Name: 	Ellen Hoffman Designs
+Description: 	Based on Starkers by Elliot Jay Stocks & Keir Whitaker
+Version: 		4.0
+Author: 		Sophia Dengo
+Author URI: 	http://sophiadengo.com
+*/
+
+/* ---------------------------------------------------------------------------------------------------------- 
+01 Sensible defaults ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+@import "css/reset.css";
+@import "css/screen.css";
+@import url('css/jquery.mmenu.css');
+
+div,
+article,
+section,
+header,
+footer,
+nav,
+li					{ position:relative; /* For absolutely positioning elements within containers (add more to the list if need be) */ }
+.group:after 		{ display:block; height:0; clear:both; content:"."; visibility:hidden; /* For clearing */ }
+body 				{ background:#fff; /* Don't forget to style your body to avoid user overrides */ }

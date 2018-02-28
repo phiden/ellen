@@ -1,0 +1,880 @@
+@import url(reset.css);
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "futura-pt", Helvetica, Arial, sans-serif;
+  font-size: 1.05em;
+  line-height: 1.8em; }
+
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading h3,
+.wf-loading p {
+  font-family: Helvetica, Arial;
+  visibility: hidden; }
+
+.hidden {
+  display: none; }
+
+h1 {
+  font-size: 6em; }
+
+h2 {
+  padding-top: 30px;
+  font-size: 1.75em; }
+
+h3 {
+  font-size: 26px;
+  line-height: normal;
+  margin-top: 30px;
+  font-weight: 600; }
+  h3 .search-result {
+    font-style: italic; }
+
+h1 a,
+h3 a {
+  text-decoration: none !important; }
+
+p {
+  margin-bottom: 30px; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+a.active,
+a:active,
+a:hover {
+  color: #ccc; }
+
+#global-container {
+  margin: 0px auto;
+  background: #fff;
+  position: relative; }
+
+#blog-page-inner .page-title,
+#page-inner .page-title {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600; }
+
+#blog-page-inner p {
+  padding-left: 0 !important; }
+
+/* LOGOS */
+#desktop-logo {
+  display: block;
+  width: 383px;
+  height: auto; }
+
+#mobile-logo {
+  display: none !important; }
+
+header {
+  text-align: center;
+  clear: both;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  padding: 30px;
+  padding-bottom: 5px;
+  /*-webkit-box-shadow: 0 1px 1px 1px rgba(0,0,0,.125);
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.125);*/
+  border-bottom: 1px solid #ccc;
+  position: relative; }
+  header h1 {
+    margin-bottom: .5em; }
+  header #header-logo img {
+    height: auto;
+    display: inline-block;
+    position: relative;
+    float: left; }
+  header #header-social {
+    float: right;
+    margin-top: 5px; }
+    header #header-social li {
+      display: inline-block; }
+      header #header-social li a img {
+        vertical-align: middle;
+        padding-right: 5px;
+        width: 43px;
+        height: auto; }
+
+/* line 208, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+#sidebar {
+  position: absolute;
+  z-index: 101;
+  float: left;
+  min-height: 800px;
+  overflow: auto;
+  padding: 30px;
+  width: 26%; }
+  #sidebar nav {
+    font-size: 16px; }
+    #sidebar nav li a.top-nav {
+      text-transform: uppercase; }
+
+.top-nav.active,
+.top-nav:hover {
+  color: #ccc; }
+
+.home.page #sidebar {
+  float: left;
+  width: 1000px;
+  overflow: auto;
+  background-image: url(ui/gradient.png) !important;
+  background-repeat: no-repeat; }
+
+#home-page-inner {
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  float: right;
+  margin-left: 0px !important; }
+
+.page #sidebar {
+  position: relative !important;
+  background-image: none; }
+
+#blog-page-inner,
+#page-inner {
+  border-left: 1px solid #ccc;
+  width: 74%;
+  float: right;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 800px; }
+  #blog-page-inner p,
+  #page-inner p {
+    text-align: left !important;
+    padding-left: 30px; }
+
+#shop-page-wrapper,
+#page-wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  height: auto;
+  overflow: visible; }
+
+/* line 284, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+footer {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-top: 20px;
+  clear: both;
+  border-top: 1px solid #ccc;
+  font-size: 0.75em;
+  font-weight: 100;
+  color: #ccc;
+  text-transform: uppercase; }
+
+#about-us {
+  text-align: left; }
+  #about-us img {
+    width: 200px;
+    height: auto;
+    padding-right: 15px;
+    float: left; }
+
+/* --------------------------------- CONTACT FORM --------------------------------- */
+#frmCSCF label {
+  display: none; }
+
+.cscfForm {
+  width: 55%;
+  margin: 0 auto;
+  padding-top: 30px; }
+  .cscfForm input,
+  .cscfForm textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc; }
+
+/* --------------------------------- EVENT CALENDAR --------------------------------- */
+.hlist li {
+  padding-right: 7.5px; }
+  .hlist li :before {
+    padding-right: 7.5px !important; }
+
+.event-list strong {
+  color: #ccc; }
+
+li.event {
+  margin-left: 0 !important;
+  height: auto;
+  overflow: auto; }
+
+.event-date {
+  margin-right: 30px !important; }
+
+.event-list .start-date,
+.event-list .end-date {
+  border: 2px solid black;
+  background-color: white !important; }
+
+.event-title,
+.event-time,
+.event-location {
+  display: inline-block; }
+
+.event-time,
+.event-location {
+  margin-left: 7.5px;
+  font-weight: 400 !important;
+  float: right; }
+
+.event-location {
+  color: #ccc; }
+
+.event-details {
+  padding-top: 7.5px; }
+  .event-details img {
+    float: left;
+    margin-right: 7.5px;
+    width: 150px;
+    height: auto; }
+
+/* --------------------------------- WOOCOMMERCE SPECIFIC --------------------------------- */
+.coupon {
+  display: none; }
+
+.woocommerce-breadcrumb {
+  /* want this to display none if JS is not enabled */ }
+
+.woof_products_top_panel {
+  display: none !important; }
+
+.woocommerce-ordering {
+  text-align: left;
+  padding-left: 30px; }
+
+.woocommerce-result-count {
+  margin-bottom: 0; }
+
+ul.products {
+  text-align: center;
+  margin: 0 auto !important;
+  width: auto;
+  height: auto; }
+  ul.products li {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top; }
+
+.product-category h3 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500; }
+
+.shop_cat_desc {
+  margin-left: 15px;
+  padding-right: 15px; }
+
+div.term-description p {
+  margin-top: 30px; }
+
+#shop-necklaces-subnav {
+  padding-left: 15px; }
+
+li.product {
+  padding-bottom: 30px;
+  padding-top: 30px; }
+  li.product h3 {
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  li.product .product-name,
+  li.product .price {
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 0; }
+  li.product .add_to_cart_button {
+    float: right;
+    margin-right: 15px;
+    margin-top: 0;
+    padding-top: 0px;
+    padding-bottom: 0px; }
+
+.search-result {
+  margin-left: 30px;
+  clear: both; }
+  .search-result .product {
+    margin-left: 0;
+    padding-left: 0; }
+  .search-result h2 {
+    text-align: left;
+    margin-bottom: 15px; }
+
+div.product {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-left: 30px;
+  text-align: left;
+  height: auto;
+  overflow: auto;
+  border: 1px solid red; }
+
+/* line 549, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+#tab-description h2 {
+  font-size: 1.05em;
+  font-weight: 600; }
+
+/* line 555, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.amount,
+.product-name {
+  font-size: 16px;
+  text-align: left;
+  font-weight: 400;
+  margin-left: 15px; }
+
+.quantity {
+  width: 40px;
+  float: left; }
+  .quantity input {
+    width: 30px;
+    margin-left: 0; }
+
+button.single_add_to_cart_button.button.alt {
+  margin-top: -5px; }
+
+.plus,
+.minus {
+  padding: 0 !important;
+  padding-bottom: 4px !important;
+  margin-top: 0 !important; }
+
+/* line 586, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.attachment-shop_thumbnail {
+  margin-top: 15px;
+  margin-right: 15px; }
+
+/* line 593, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.product .amount {
+  margin-left: 0; }
+
+/* line 598, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.see-details {
+  float: right; }
+
+/* line 603, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+span.price {
+  float: left; }
+
+/* line 608, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.product_title {
+  font-size: 1.5em;
+  font-weight: 400; }
+
+/* line 614, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.images {
+  float: left;
+  width: 70%;
+  border: 1px solid red; }
+
+.summary {
+  width: 29%;
+  float: right; }
+  .summary p {
+    margin-left: 0;
+    padding-left: 0 !important; }
+  .summary .price {
+    margin-bottom: 0; }
+  .summary .stock {
+    color: green;
+    margin-bottom: 15px; }
+
+button, input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  border: 2px solid black;
+  background-color: white !important;
+  color: black;
+  font-size: 0.85em;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 7.5px;
+  margin-top: 15px; }
+
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce #content input.button,
+.woocommerce-page a.button,
+.woocommerce-page button.button,
+.woocommerce-page input.button,
+.woocommerce-page #respond input#submit,
+.woocommerce-page #content input.button {
+  border: 2px solid black;
+  background-color: white !important;
+  color: black;
+  font-size: 0.85em;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 7.5px;
+  margin-top: 15px;
+  font-size: 100%;
+  margin: 0;
+  line-height: 1em;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  font-weight: normal;
+  left: auto;
+  text-shadow: none;
+  color: black;
+  background: none;
+  white-space: nowrap;
+  display: inline-block;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt {
+  background: #ffffff;
+  border-color: #000;
+  color: black;
+  text-shadow: none; }
+
+.woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce #content input.button:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page #content input.button:hover,
+.woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce #content input.button.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page #content input.button.alt:hover {
+  background: #fff;
+  color: #ccc;
+  text-shadow: none; }
+
+.woocommerce-message {
+  margin-top: 30px; }
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+  float: left;
+  width: 75%;
+  text-align: left;
+  margin-left: 30px; }
+
+/* line 698, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.woocommerce .cart-collaterals .cart_totals table th,
+.woocommerce-page .cart-collaterals .cart_totals table th {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  width: auto !important; }
+
+/* line 706, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.woocommerce .cart-collaterals .shipping_calculator, .woocommerce-page .cart-collaterals .shipping_calculator {
+  width: 75%;
+  clear: left;
+  float: left;
+  text-align: left;
+  margin-left: 30px; }
+
+/* line 714, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.shipping_calculator h2 {
+  font-size: 1.05em; }
+
+/* line 719, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.shop_table {
+  margin-left: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px; }
+
+/* line 727, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.shop_table tbody {
+  padding-bottom: 30px; }
+
+/* line 732, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.cart_totals table {
+  width: 100%;
+  margin-left: 30px; }
+
+/* line 738, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+.cart_totals table td {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  width: auto !important; }
+
+.cart_item .product-thumbnail a img {
+  width: 75px;
+  height: 75px; }
+
+.page-numbers {
+  margin-bottom: 15px; }
+  .page-numbers li {
+    display: inline-block; }
+
+.woocommerce_info {
+  display: none; }
+
+/* ------------------------------------------- HAPPY MOBILE STUFF  ------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+  /* line 769, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #desktop-logo {
+    display: none !important; }
+
+  /* line 775, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #mobile-logo {
+    display: block !important;
+    float: right !important;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%; }
+
+  /* line 785, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  header {
+    padding: 15px;
+    padding-top: 20px;
+    /* visual vertical center */ }
+
+  /* line 791, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #header-social {
+    display: none; }
+
+  /* line 796, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #mobile-nav-trigger {
+    float: left;
+    width: 40px;
+    height: auto; }
+
+  /* line 803, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #mobile-nav-trigger img {
+    width: 100%;
+    height: auto; }
+
+  /* line 809, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #mobile-header-logo img {
+    float: right;
+    width: 80%; }
+
+  /* line 815, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #mobile-nav {
+    padding: 30px; }
+
+  /* homepage */
+  /* line 821, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #home-page-inner {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    clear: both; }
+
+  /* Shopping pages */
+  /* line 831, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .zoomContainer {
+    display: none; }
+
+  #sidebar {
+    display: none; }
+
+  /* line 842, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #shop-page-wrapper,
+  #page-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 480px;
+    overflow: visible; }
+
+  /* line 850, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #shop-page-wrapper #page-inner,
+  .page #global-container #page-wrapper #page-inner {
+    float: none;
+    width: 100%;
+    border-left: none; }
+
+  /* line 858, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  ul.products {
+    width: 100%; }
+
+  /* line 863, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  ul.products li {
+    display: list-item;
+    width: 100%; }
+
+  /* line 869, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  ul.products li a img {
+    width: 100%;
+    height: auto; }
+
+  /* line 875, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  li.product {
+    padding-top: 0; }
+
+  /* DETAILS */
+  /* line 882, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  div.product {
+    padding-top: 0;
+    margin: 0; }
+
+  /* line 888, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .images {
+    float: none;
+    margin: 0;
+    padding-bottom: 30px;
+    width: 100%; }
+
+  /* line 896, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .woocommerce-main-image img {
+    height: auto;
+    width: 100%; }
+
+  /* line 901, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #tab-description,
+  .summary {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  /* line 908, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .summary {
+    float: none;
+    width: 100%; }
+
+  /* line 913, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #about-us {
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  /* line 920, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  #about-us img {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 15px; }
+
+  /* CONTACT */
+  /* line 928, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .cscfForm {
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  /* EVENTS */
+  /* line 938, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .hlist {
+    padding-left: 15px; }
+
+  /* line 943, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .event-list p {
+    margin-left: 15px;
+    margin-right: 15px; }
+
+  /* line 950, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  li.event {
+    margin: 0 !important; }
+
+  /* line 955, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .event-date {
+    margin: 0 !important;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  /* line 962, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .event-info {
+    text-align: left;
+    padding-left: 15px; }
+
+  /* line 968, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .event-details img {
+    float: none;
+    width: 85%;
+    margin-right: 0;
+    display: block;
+    padding-right: 15px; }
+
+  /* line 979, ../../../../../../Sites/sass/ellenhoffman/sass/screen.scss */
+  .event-time,
+  .event-location {
+    float: none;
+    margin-left: 0;
+    display: block; } }
+/* ===============
+  
+  END MOBILE 
+  
+  ================ */
+/* BLOG SPECIFIC */
+#blog {
+  margin-top: 20px; }
+
+.excerpt-thumb {
+  float: left;
+  width: 30%;
+  height: auto;
+  margin-right: 30px;
+  margin-bottom: 30px; }
+
+.excerpt-thumb img {
+  width: 100%;
+  height: auto; }
+
+.blog-article li,
+.blog-article-single li {
+  list-style: circle;
+  list-style-position: inside; }
+
+.blog-article a,
+.blog-article-single a {
+  text-decoration: underline; }
+
+.blog-article, .blog-article-single {
+  text-align: left;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc; }
+
+.blog-article-single {
+  border-bottom: none; }
+  .blog-article-single p {
+    padding-left: 0; }
+
+.blog-article h3 {
+  font-size: 26px;
+  margin-bottom: 30px; }
+
+.blog-article .alignnone,
+.wp-caption {
+  text-align: center;
+  margin: 0 auto; }
+
+.blog-article img, .blog-article-single img {
+  max-width: 350px;
+  height: auto;
+  text-align: center;
+  margin: 0 auto; }
+
+.wp-caption-text {
+  font-size: 0.85em;
+  font-style: italic;
+  color: #cecece; }
+
+/* MAILCHIMP */
+#mc-embedded-subscribe-form {
+  padding: 0 !important; }
+
+#mc_embed_signup {
+  font-family: "futura-pt", Helvetica, Arial, sans-serif !important;
+  font-size: 1.05em !important;
+  line-height: 1.8em !important; }
+  #mc_embed_signup .indicates-required {
+    text-align: center; }
+  #mc_embed_signup #mc_embed_signup_scroll {
+    width: 55%;
+    margin: 0 auto; }
+    #mc_embed_signup #mc_embed_signup_scroll h2 {
+      padding-top: 30px !important;
+      margin: 0 !important; }
+  #mc_embed_signup .button {
+    color: black !important;
+    font-family: "futura-pt", Helvetica, Arial, sans-serif !important;
+    border: 2px solid black !important;
+    background-color: white !important;
+    font-size: 1.25em !important;
+    height: inherit !important;
+    -webkit-border-radius: 5px 5px 5px 5px !important;
+    border-radius: 5px 5px 5px 5px !important;
+    padding: 7.5px !important;
+    margin-top: 15px !important;
+    font-weight: normal !important;
+    width: 100% !important;
+    line-height: normal !important; }
+  #mc_embed_signup .mc-field-group {
+    width: 100% !important;
+    text-align: left;
+    display: block; }
+    #mc_embed_signup .mc-field-group p {
+      padding-left: 0; }
+    #mc_embed_signup .mc-field-group input {
+      width: 100%;
+      height: 34px;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.428571429;
+      color: #555;
+      vertical-align: middle;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      margin-bottom: 15px; }
+    #mc_embed_signup .mc-field-group .asterisk {
+      position: relative !important;
+      font-size: 1.05em;
+      top: 0 !important;
+      right: 0 !important; }
+
+#mce-responses {
+  width: 100% !important;
+  margin-top: 15px !important; }
+
+#mc_embed_signup div#mce-responses {
+  padding: 0 !important; }
+
+#search,
+#mailer {
+  max-width: 150px;
+  background-color: transparent;
+  padding-top: 30px;
+  border-bottom: 5px solid black; }
+
+#search {
+  border-bottom: none; }
+
+#social {
+  clear: both;
+  width: 100%; }
+
+.share {
+  display: inline-block;
+  height: 40px;
+  vertical-align: top;
+  padding-top: 8px; }
+
+.st-twitter-counter,
+.st-facebook-counter,
+.st-pinterest-counter {
+  height: 30px !important; }
+
+.stButton_gradient {
+  height: 22px !important; }
+
+.stArrow {
+  height: 22px !important; }
+
+.share.fb-share-button {
+  padding-top: 0 !important; }
+
+#blog-header {
+  padding: 20px; }
+  #blog-header img {
+    width: 100%;
+    height: auto; }
+
+#disqus_thread {
+  width: 90%;
+  margin: 0 auto; }
+
+.count {
+  display: none; }
+
+#shop-col ul li,
+#shop-cat ul li {
+  margin-left: 15px; }
+#shop-col ul:last-child,
+#shop-cat ul:last-child {
+  margin-bottom: 15px; }
+
+/*# sourceMappingURL=screen.css.map */
