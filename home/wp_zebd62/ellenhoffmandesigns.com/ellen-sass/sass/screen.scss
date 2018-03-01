@@ -675,6 +675,12 @@ input[type="submit"],
   margin-top: 30px;
 }
 
+.cart {
+  position:relative;
+  padding-bottom:15px;
+  z-index:1000;
+}
+
 .woocommerce .cart-collaterals .cart_totals,
 .woocommerce-page .cart-collaterals .cart_totals {
   float: left;
